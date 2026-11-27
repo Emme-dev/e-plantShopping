@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f8f4;
+}
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ---------- Landing page ---------- */
+.landing-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  transition: opacity 0.5s ease;
+}
+
+.landing-page.fade-out {
+  display: none;
+}
+
+/* Background image for the Paradise Nursery landing page */
+.background-image {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px 6%;
+}
+
+.landing_content {
+  color: #fff;
+  text-align: center;
+  max-width: 480px;
+}
+
+.landing_content h1 {
+  font-size: 3rem;
+  margin: 0 0 12px;
+}
+
+.landing_content p {
+  font-size: 1.4rem;
+  margin: 12px 0 28px;
+}
+
+.divider {
+  width: 90px;
+  height: 4px;
+  background: #4caf50;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.get-started-button {
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 14px 40px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.get-started-button:hover {
+  background: #388e3c;
+  transform: scale(1.05);
+}
+
+.product-list-container {
+  display: none;
+}
+
+.product-list-container.visible {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .landing_content h1 {
+    font-size: 2.2rem;
+  }
+}
